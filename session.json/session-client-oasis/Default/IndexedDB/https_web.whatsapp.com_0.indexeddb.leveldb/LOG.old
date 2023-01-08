@@ -1,0 +1,14 @@
+2023/01/08-05:39:29.671 11e03 Reusing MANIFEST /Users/andresroa/Documents/oasisFotos/backend/session.json/session-client-oasis/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/08-05:39:29.672 11e03 Recovering log #23
+2023/01/08-05:39:29.673 11e03 Reusing old log /Users/andresroa/Documents/oasisFotos/backend/session.json/session-client-oasis/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000023.log 
+2023/01/08-05:39:29.673 11e03 Delete type=2 #21
+2023/01/08-05:39:29.746 11e03 Level-0 table #28: started
+2023/01/08-05:39:29.749 11e03 Level-0 table #28: 20504 bytes OK
+2023/01/08-05:39:29.759 11e03 Delete type=0 #23
+2023/01/08-05:39:29.759 11e03 Manual compaction at level-0 from '\x00\x0a\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0b\x00\x00\x00' @ 0 : 0; will stop at '\x00\x0a\x06 \x03\x00\x00\x00\x00\x00\x80V@\x00\x01\x0b\x00I\x00d\x00T\x00t\x00l\x009\x000\x00D\x00a\x00y\x00s' @ 8884 : 1
+2023/01/08-05:39:29.759 11e03 Compacting 1@0 + 1@1 files
+2023/01/08-05:39:29.763 11e03 Generated table #29@0: 2154 keys, 18365 bytes
+2023/01/08-05:39:29.763 11e03 Compacted 1@0 + 1@1 files => 18365 bytes
+2023/01/08-05:39:29.771 11e03 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/01/08-05:39:29.771 11e03 Delete type=2 #28
+2023/01/08-05:39:29.771 11e03 Manual compaction at level-0 from '\x00\x0a\x06 \x03\x00\x00\x00\x00\x00\x80V@\x00\x01\x0b\x00I\x00d\x00T\x00t\x00l\x009\x000\x00D\x00a\x00y\x00s' @ 8884 : 1 .. '\x00\x0b\x00\x00\x00' @ 0 : 0; will stop at (end)
