@@ -41,23 +41,20 @@ client.on('authenticated', () => {
 });
 
 client.on('message', async (message) => {
-    if(message.body.toLocaleLowerCase() == 'hola' 
-    || message.body.toLocaleLowerCase() == 'holaa'
-    || message.body.toLocaleLowerCase() == 'holi'
-    || message.body.toLocaleLowerCase() == 'hola.'
-    || message.body.toLocaleLowerCase() == 'hola, buenos días'
-    || message.body.toLocaleLowerCase() == 'hola buenos días'
-    || message.body.toLocaleLowerCase() == 'hola, buenos dias'
-    || message.body.toLocaleLowerCase() == 'hola buenos dias'
-    || message.body.toLocaleLowerCase() == 'hola, buenas noches'
-    || message.body.toLocaleLowerCase() == 'hola buenas noches'
-    || message.body.toLocaleLowerCase() == 'hola, buenas tardes'
-    || message.body.toLocaleLowerCase() == 'hola buenas tardes'
+    if(message.body.toLocaleLowerCase().includes('hol')
+    || message.body.toLocaleLowerCase().includes('link')
+    || message.body.toLocaleLowerCase().includes('tardes')
+    || message.body.toLocaleLowerCase().includes('días')
+    || message.body.toLocaleLowerCase().includes('dias')
+    || message.body.toLocaleLowerCase().includes('noches')
     ) {
         client.sendMessage(message.from, `Hola ${message._data.notifyName}, un gusto saludarte, mi nombre es Sofía, seré tu chat bot de ayuda para reclamar tus fotografías.\n\n¿Quieres saber el estado de tus fotografías?\n_Escribe la respuesta como aparece en este mensaje por favor_\n1) Si\n2) No\n\nEspero poderte ser de ayuda`)
     }
     if(message.body.toLocaleLowerCase() == 'si'
-    || message.body.toLocaleLowerCase() == 'sí') {
+    || message.body.toLocaleLowerCase() == 'sí'
+    || message.body.toLocaleLowerCase() == '1'
+    || message.body.toLocaleLowerCase() == '1)'
+    ) {
         client.sendMessage(message.from, `Genial!! ${message._data.notifyName}, para ayudarte por favor digita el número que registrarte al momento de tomarte las fotografías por favor\n\n*Sin espacios, y tampoco signos especiales*`)
     }
     if(message.body.trim().length == 10) {
@@ -85,7 +82,10 @@ client.on('message', async (message) => {
             client.sendMessage(message.from, 'Lo sentimos, nuestro servidor está fallando. Intentalo más tarde')
         }
     }
-    if(message.body.toLocaleLowerCase() == 'no') {
+    if(message.body.toLocaleLowerCase() == 'no'
+    || message.body.toLocaleLowerCase() == '2'
+    || message.body.toLocaleLowerCase() == '2)'
+    ) {
         client.sendMessage(message.from, '*_Gracias por contactarnos, recuerda que somos Oasis Eco Park_*')
     }
     if(message.body.toLocaleLowerCase() == '-asesor') {
