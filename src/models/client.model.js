@@ -30,14 +30,17 @@ const clientSchema = new Schema(
         },
         observaciones: {
             type: String,
+            default: '',
             require: false
         },
         horaInicial: {
             type: String,
+            default: '',
             require: false
         },
         horaFinal: {
             type: String,
+            default: '',
             require: false
         },
         link: {

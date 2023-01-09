@@ -11,11 +11,11 @@ const updateCliente = async (req, res) => {
     }
 }
 
-const registerHours = async () => {
+const registerHours = async (req, res) => {
     const {horaInicial, horaFinal} = req.body;
     try {
         await Clientes.updateOne({_id: {$eq: req.params.id}}, {horaInicial, horaFinal})
-        return res.status(200).json({message: "Cliente actualizado con exitos"})
+        return res.status(200).json({status: 200})
     } catch (error) {
         return res.status(500).json({message: error})
     }
@@ -46,4 +46,14 @@ const deleteCliente = async (req, res) => {
     }
 }
 
-module.exports = { deleteCliente, getCliente, updateCliente, registerHours }
+const getClient = async (req, res) => {
+    let id = mongoose.Types.ObjectId(req.params.id)
+    try {
+        const cliente = await Clientes.findOne({_id: {$eq: id}})
+        return res.status(200).json(cliente)
+    } catch (error) {
+        return res.status(500).json({message: error})
+    }
+}
+
+module.exports = { deleteCliente, getCliente, updateCliente, registerHours, getClient }

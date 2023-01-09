@@ -1,3 +1,5 @@
-2023/01/08-05:39:33.428 2203 Reusing MANIFEST /Users/andresroa/Documents/oasisFotos/backend/session.json/session-client-oasis/Default/Local Storage/leveldb/MANIFEST-000001
-2023/01/08-05:39:33.429 2203 Recovering log #3
-2023/01/08-05:39:33.429 2203 Reusing old log /Users/andresroa/Documents/oasisFotos/backend/session.json/session-client-oasis/Default/Local Storage/leveldb/000003.log 
+2023/01/08-21:47:26.474 b103 Reusing MANIFEST /Users/andresroa/Documents/oasisFotos/backend/session.json/session-client-oasis/Default/Local Storage/leveldb/MANIFEST-000001
+2023/01/08-21:47:26.474 b103 Recovering log #3
+2023/01/08-21:47:26.474 b103 Level-0 table #3: started
+2023/01/08-21:47:26.488 b103 Level-0 table #3: 26828 bytes OK
+2023/01/08-21:47:26.495 b103 Delete type=0 #3
