@@ -24,13 +24,7 @@ const registerHours = async (req, res) => {
 const getCliente = async (req, res) => {
     let id = mongoose.Types.ObjectId(req.params.id)
     try {
-        const clients = await Clientes.aggregate([
-            { 
-                $sort: { createdAt: -1 }
-            }, 
-            {
-                $match: {registerDay: id}
-            }])
+        const clients = await Clientes.find({registerDay: {$eq: id}})
         return res.status(200).json(clients)
     } catch (error) {
         return res.status(500).json({message: error})

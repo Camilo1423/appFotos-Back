@@ -7,7 +7,7 @@ router.get('/:id', getCliente)
 router.get('/single/:id', getClient)
 router.put('/update/:id', updateCliente)
 router.put('/hours/update/:id', registerHours)
-router.delete('/update/:id', deleteCliente)
+router.delete('/delete/:id', deleteCliente)
 
 
 module.exports = router
