@@ -7,6 +7,14 @@ const userSchema = new Schema(
             type: String,
             require: true
         },
+        role: {
+            type: String,
+            require: true
+        },
+        genero: {
+            type: String,
+            require: true
+        },
         email: {
             type: String,
             require: true
@@ -19,6 +27,16 @@ const userSchema = new Schema(
             type: String,
             require: true,
             unique: true
+        },
+        publicId: { 
+            type: String,
+            require: false,
+            default: ''
+        },
+        urlLabel: {
+            type: String,
+            require: false,
+            default: ''
         }
     },
     {

@@ -2,6 +2,8 @@ const  dotenv = require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
+const multer = require('multer')
+const path = require('path')
 const mongoose = require("mongoose")
 
 const { Clientes } = require("./src/models/index.js")
@@ -9,9 +11,19 @@ const { Clientes } = require("./src/models/index.js")
 // inicializar la instacia de express
 const app = express();
 
+// configuracion para subir las imagenes
+const storage = multer.diskStorage({
+    destination: path.join(__dirname, 'public/uploads'),
+    filename: (req, file, cb) => {
+        cb(null, new Date().getTime() + path.extname(file.originalname))
+    }
+})
+
+
 // midelwere morgan
 app.use(cors())
 app.use(morgan('dev'))
+app.use(multer({storage}).single('image')) // Configuración y .single() recibe como parametro el nombre del input que enviara o cargara la imagen
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
